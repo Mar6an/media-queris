@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  border: 0;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  padding-right: 1em;
+}
+nav {
+  padding: 10px;
+  grid-area: menu;
+  background: yellow;
+  color: black;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex img {
+  width: 5em;
+}
+.grid {
+    display: none;
+}
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  grid-area: filtro;
+  background: black;
+  color: #ffed3a;
+}
+.side-flex {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+}
+.side-flex h3 {
+  font-size: medium;
+}
+.side-flex p {
+  display: flex;
+  justify-content: center;
+}
+main {
+  padding: 10px;
+  grid-area: seccion-principal;
+  background: black;
+  color: yellow;
+}
+.main-flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.card img {
+  width: 20em;
+  height: 20em;
+}
+footer {
+  padding: 10px;
+  grid-area: pie-de-pagina;
+  background: yellow;
+  color: black;
+}
+.footer-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+div {
+  display: grid;
+  grid-template-rows: 1fr 1 fr 1fr;
+  grid-template-areas:
+    "menu"
+    "filtro"
+    "seccion-principal"
+    "pie-de-pagina";
+}
+
+@media (min-width: 576px) {
+  div {
+    grid-template-areas:
+      "menu filtro"
+      "menu seccion-principal"
+      "pie-de-pagina seccion-principal";
+    grid-template-columns: 1fr 10fr;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 8em;   
+  }
+  .grid {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:3em;
+    font-size: large;
+  }
+  .nav-container {
+    display: flex;
+    gap: 1em;
+  }
+  .icon {
+    display: none;
+  }
+  .side-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .titulo {
+    padding-left: 30em;
+  }
+  .input {
+    display: flex;
+    width: 100%;
+  }
+  .input input {
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .main-flex {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: large;
+  }
+  .footer-flex {
+    white-space: nowrap;
+  }
+
+}
+
+
