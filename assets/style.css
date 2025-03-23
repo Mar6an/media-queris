@@ -2,25 +2,32 @@
   margin: 0;
   border: 0;
 }
+body {
+  
+  overflow-x: hidden;
+}
 h1 {
   display: flex;
   justify-content: center;
   font-size: xx-large;
-  padding-right: 1em;
+  
+  
 }
 nav {
-  padding: 10px;
+  
   grid-area: menu;
   background: yellow;
   color: black;
 }
+
 .nav-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 .flex img {
-  width: 5em;
+  width: 3em;
 }
 .grid {
   display: none;
@@ -82,7 +89,7 @@ footer {
 }
 div {
   display: grid;
-  grid-template-rows: 1fr 1 fr 1fr;
+  grid-template-rows: 1fr 1 1fr;
   grid-template-areas:
     "menu"
     "filtro"
@@ -93,8 +100,8 @@ div {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-column: 2;
-  padding-left: 4em;
+  
+  
 }
 .Paginación {
   background-color: black;
