@@ -23,7 +23,7 @@ nav {
   width: 5em;
 }
 .grid {
-    display: none;
+  display: none;
 }
 aside {
   display: flex;
@@ -89,7 +89,47 @@ div {
     "seccion-principal"
     "pie-de-pagina";
 }
+.paginacion {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+  padding-left: 4em;
+}
+.Paginación {
+  background-color: black;
+}
+.pagination {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
 
+
+.pagination li {
+  display: inline;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: yellow;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.pagination a:hover {
+  background-color: yellow;
+  color: black;
+}
+.pagination .active {
+  background-color: black;
+  color: yellow;
+}
 @media (min-width: 576px) {
   div {
     grid-template-areas:
@@ -101,13 +141,13 @@ div {
   .flex {
     display: flex;
     flex-direction: column;
-    gap: 8em;   
+    gap: 8em;
   }
   .grid {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:3em;
+    gap: 3em;
     font-size: large;
   }
   .nav-container {
@@ -141,10 +181,44 @@ div {
     grid-template-columns: 1fr 1fr 1fr;
     font-size: large;
   }
+  .paginacion {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    padding-left: 4em;
+  }
+  .Paginación {
+    background-color: black;
+  }
+  .pagination {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+.pagination li {
+    display: inline;
+}
+.pagination a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: yellow;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+.pagination a:hover {
+    background-color: yellow;
+    color: black;
+}
+.pagination .active {
+    background-color: black;
+    color: yellow;
+}
   .footer-flex {
     white-space: nowrap;
   }
-
 }
-
-
