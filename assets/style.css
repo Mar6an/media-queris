@@ -1,20 +1,24 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   border: 0;
 }
+html,
 body {
-  
+  height: 100%;
+  margin: 0;
   overflow-x: hidden;
+}
+
+.main-container {
+  height: 100vh;
 }
 h1 {
   display: flex;
   justify-content: center;
   font-size: xx-large;
-  
-  
 }
 nav {
-  
   grid-area: menu;
   background: yellow;
   color: black;
@@ -89,7 +93,7 @@ footer {
 }
 div {
   display: grid;
-  grid-template-rows: 1fr 1 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
     "menu"
     "filtro"
@@ -100,8 +104,6 @@ div {
   display: grid;
   justify-content: center;
   align-items: center;
-  
-  
 }
 .Paginación {
   background-color: black;
@@ -112,7 +114,6 @@ div {
   padding: 0;
   list-style: none;
 }
-
 
 .pagination li {
   display: inline;
@@ -137,6 +138,7 @@ div {
   background-color: black;
   color: yellow;
 }
+
 @media (min-width: 576px) {
   div {
     grid-template-areas:
@@ -203,11 +205,11 @@ div {
     gap: 10px;
     padding: 0;
     list-style: none;
-}
-.pagination li {
+  }
+  .pagination li {
     display: inline;
-}
-.pagination a {
+  }
+  .pagination a {
     text-decoration: none;
     padding: 10px 15px;
     border: 2px solid black;
@@ -216,15 +218,15 @@ div {
     font-size: 16px;
     transition: all 0.3s ease-in-out;
     display: inline-block;
-}
-.pagination a:hover {
+  }
+  .pagination a:hover {
     background-color: yellow;
     color: black;
-}
-.pagination .active {
+  }
+  .pagination .active {
     background-color: black;
     color: yellow;
-}
+  }
   .footer-flex {
     white-space: nowrap;
   }
